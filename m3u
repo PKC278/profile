@@ -1,34 +1,34 @@
 #EXTM3U url-tvg="http://epg.51zmt.top:8000/e.xml"
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="1" tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="央视",CCTV1
-http://111.20.33.93/TVOD/88888888/224/3221225804/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225783/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225660/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225804/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="2" tvg-name="CCTV2" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png" group-title="央视",CCTV2
-http://111.20.33.93/TVOD/88888893/224/3221226195/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225762/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226195/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="3" tvg-name="CCTV3" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png" group-title="央视",CCTV3
-http://111.20.33.93/TVOD/88888893/224/3221226397/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225782/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226397/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="4" tvg-name="CCTV4" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4.png" group-title="央视",CCTV4
-http://111.20.33.93/TVOD/88888893/224/3221226191/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225781/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226191/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="5" tvg-name="CCTV5" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png" group-title="央视",CCTV5
-http://111.20.33.93/TVOD/88888893/224/3221226395/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225780/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226395/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="6" tvg-name="CCTV5+" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5+.png" group-title="央视",CCTV5+
 http://111.20.33.93/TVOD/88888888/224/3221225761/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="7" tvg-name="CCTV6" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV6.png" group-title="央视",CCTV6
-http://111.20.33.93/TVOD/88888893/224/3221226393/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225779/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226393/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="8" tvg-name="CCTV7" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV7.png" group-title="央视",CCTV7
-http://111.20.33.93/TVOD/88888893/224/3221226192/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225778/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226192/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="9" tvg-name="CCTV8" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV8.png" group-title="央视",CCTV8
-http://111.20.33.93/TVOD/88888893/224/3221226391/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225759/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226391/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="10" tvg-name="CCTV9" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV9.png" group-title="央视",CCTV9
-http://111.20.33.93/TVOD/88888893/224/3221226197/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225758/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226197/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="11" tvg-name="CCTV10" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV10.png" group-title="央视",CCTV10
-http://111.20.33.93/TVOD/88888893/224/3221226189/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225777/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226189/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="12" tvg-name="CCTV11" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV11.png" group-title="央视",CCTV11
-http://111.20.33.93/TVOD/88888893/224/3221226240/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225776/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226240/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="13" tvg-name="CCTV12" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV12.png" group-title="央视",CCTV12
-http://111.20.33.93/TVOD/88888893/224/3221226190/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225775/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226190/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="14" tvg-name="CCTV13" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png" group-title="央视",CCTV13
-http://111.20.33.93/TVOD/88888893/224/3221226233/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225774/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226233/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="15" tvg-name="CCTV14" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV14.png" group-title="央视",CCTV14
-http://111.20.33.93/TVOD/88888893/224/3221226193/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225784/index.m3u8
+http://111.20.33.93/TVOD/88888893/224/3221226193/index.m3u8
 #EXTINF:-1 tvg-id="16" tvg-name="CCTV15" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV15.png" group-title="央视",CCTV15
 http://39.135.32.236:6610/PLTV/77777777/224/3221225693/index.m3u8?servicetype=1&IASHttpSessionId=OTT
 #EXTINF:-1 tvg-id="7249" tvg-name="CCTV16" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="央视",CCTV16
@@ -38,19 +38,19 @@ http://111.20.33.93/TVOD/88888893/224/3221226198/index.m3u8
 #EXTINF:-1 tvg-id="106" tvg-name="CCTV4K" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png" group-title="央视",CCTV4K
 http://ye23.win/iptv/4k.cctv.php#https://p.ggiptv.com/v/4k.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="28" tvg-name="浙江卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/zhejiang.png" group-title="卫视",浙江卫视
-http://111.20.33.93/TVOD/88888888/224/3221225798/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225788/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225798/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="27" tvg-name="湖南卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/hunan.png" group-title="卫视",湖南卫视
-http://111.20.33.93/TVOD/88888888/224/3221225799/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225787/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225799/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="31" tvg-name="东方卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/dongfang.png" group-title="卫视",东方卫视
-http://111.20.33.93/TVOD/88888888/224/3221225797/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225789/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225599/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225797/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="29" tvg-name="江苏卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/jiangsu.png" group-title="卫视",江苏卫视
-http://111.20.33.93/TVOD/88888888/224/3221225800/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225746/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225800/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="30" tvg-name="北京卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/beijing.png" group-title="卫视",北京卫视
-http://111.20.33.93/TVOD/88888888/224/3221225796/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225790/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225796/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="33" tvg-name="广东卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/guangdong.png" group-title="卫视",广东卫视
-http://111.20.33.93/TVOD/88888888/224/3221225803/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225757/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225803/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="34" tvg-name="深圳卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/shenzhen.png" group-title="卫视",深圳卫视
-http://111.20.33.93/TVOD/88888888/224/3221225801/index.m3u8#http://111.20.33.93/TVOD/88888888/224/3221225752/index.m3u8
+http://111.20.33.93/TVOD/88888888/224/3221225801/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="46" tvg-name="黑龙江卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/heilongjiang.png" group-title="卫视",黑龙江卫视
 http://111.20.33.93/TVOD/88888888/224/3221225802/index.m3u8
 #EXTINF:-1 catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" tvg-id="14" tvg-name="CCTV13" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png" group-title="央视",CCTV13 540
