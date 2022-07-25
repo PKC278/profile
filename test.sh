@@ -1,16 +1,16 @@
 #!/bin/bash
 #
 # Author :
-# Date : 220705
-# Version : 0.8.0.5
+# Date : 220607
+# Version : 0.8.0.3
 #
 #
 # User Variables :
 
-rploaderver="0.8.0.5"
+rploaderver="0.8.0.3"
 build="main"
 rploaderfile="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/rploader.sh"
-rploaderrepo="https://github.com/pocopico/tinycore-redpill/raw/$build/"
+rploaderrepo="https://github.com/llm-y2k/tinycore-redpill/raw/$build/"
 
 redpillextension="https://github.com/pocopico/rp-ext/raw/$build/redpill/rpext-index.json"
 modextention="https://github.com/pocopico/rp-ext/raw/$build/rpext-index.json"
@@ -21,7 +21,20 @@ dtsfiles="https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build"
 timezone="UTC"
 ntpserver="pool.ntp.org"
 
-fullupdatefiles="custom_config.json custom_config_jun.json global_config.json modules.alias.3.json.gz modules.alias.4.json.gz rpext-index.json user_config.json dtc rploader.sh ds1621p.dts ds920p.dts"
+fullupdatefiles="rploader-cn.sh ext-manager.sh file.sh custom_config.json custom_config_jun.json global_config.json modules.alias.3.json.gz modules.alias.4.json.gz rpext-index.json user_config.json dtc rploader.sh ds1621p.dts ds920p.dts"
+
+############### Date : 220619
+# github加速网址
+acc_url="https://ghproxy.futils.com/"
+
+# 网址重定向函数
+function remix_url() {
+    TMPURL="${1}"
+    TMPURL=${TMPURL/"https://raw.githubusercontent.com/"/${acc_url}"https://raw.githubusercontent.com/"}
+    TMPURL=${TMPURL/"https://github.com"/${acc_url}"https://raw.githubusercontent.com"}
+    TMPURL=${TMPURL/"/raw/"/"/"}
+    echo "Redirecting..."
+}
 
 # END Do not modify after this line
 ######################################################################################################
@@ -54,8 +67,6 @@ function history() {
     0.8.0.1 Updated postupdate to facilitate update to update2
     0.8.0.2 Updated satamap to support DUMMY PORT detection 
     0.8.0.3 Updated satamap to avoid the use of 0 in first controller that cause KP
-    0.8.0.4 Fixed missing binary
-    0.8.0.5 Fixed a jq issue in listextension
     --------------------------------------------------------------------------------------
 EOF
 
@@ -366,13 +377,13 @@ function processpat() {
         echo -e "Configdir : $configdir \nConfigfile: $configfile \nPat URL : $pat_url"
         echo "Downloading pat file from URL : ${pat_url} "
 
-        if [ $(df -h ${local_cache} | grep mnt | awk '{print $4}' | cut -c 1-3) -le 370 ]; then
+        if [ $(df -h /${local_cache} | grep mnt | awk '{print $4}' | cut -c 1-3) -le 370 ]; then
             echo "No adequate space on ${local_cache} to download file into cache folder, clean up the space and restart"
             exit 99
         fi
 
-        [ -n $pat_url ] && curl --location ${pat_url} -o "${local_cache}/${SYNOMODEL}.pat"
-        patfile="${local_cache}/${SYNOMODEL}.pat"
+        [ -n $pat_url ] && curl --location ${pat_url} -o "/${local_cache}/${SYNOMODEL}.pat"
+        patfile="/${local_cache}/${SYNOMODEL}.pat"
         if [ -f ${patfile} ]; then
             testarchive ${patfile}
         else
@@ -462,8 +473,8 @@ function postupdate() {
 
     echo "Creating temp ramdisk space" && mkdir /home/tc/ramdisk
 
-    echo "Mounting partition ${loaderdisk}1" && sudo mount /dev/${loaderdisk}1
-    echo "Mounting partition ${loaderdisk}2" && sudo mount /dev/${loaderdisk}2
+    echo "Mounting partition ${loaderdisk}1}" && sudo mount /dev/${loaderdisk}1
+    echo "Mounting partition ${loaderdisk}2}" && sudo mount /dev/${loaderdisk}2
 
     cd /home/tc/ramdisk
 
@@ -543,8 +554,8 @@ function postupdatev1() {
     if [ ! -n "$(which bspatch)" ]; then
 
         echo "bspatch does not exist, bringing over from repo"
-
-        curl --location "https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/bspatch" -O
+        remix_url "https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/bspatch"
+        curl --location ${TMPURL} -O
 
         chmod 777 bspatch
         sudo mv bspatch /usr/local/bin/
@@ -713,7 +724,8 @@ function removebundledexts() {
 
     echo "Removing bundled exts directories"
     for bundledext in $(grep ":" bundled-exts.json | awk '{print $2}' | sed -e 's/"//g' | sed -e 's/,/\n/g'); do
-        bundledextdir=$(curl --location -s "$bundledext" | jq -r -e '.id')
+        remix_url $bundledext
+        bundledextdir=$(curl --location ${TMPURL} | jq -r -e '.id')
         if [ -d /home/tc/redpill-load/custom/extensions/${bundledextdir} ]; then
             echo "Removing : ${bundledextdir}"
             sudo rm -rf /home/tc/redpill-load/custom/extensions/${bundledextdir}
@@ -737,7 +749,8 @@ function fullupgrade() {
         echo "Updating ${updatefile}"
 
         sudo mv $updatefile old/${updatefile}.${backupdate}
-        sudo curl --location "${rploaderrepo}/${updatefile}" -O
+        remix_url ${rploaderrepo}/${updatefile}
+        sudo curl --location ${TMPURL} -O
 
     done
 
@@ -965,7 +978,8 @@ function patchdtc() {
     fi
 
     echo "Downloading dtc binary"
-    curl --location --progress-bar "$dtcbin" -O
+    remix_url $dtcbin
+    curl --location --progress-bar ${TMPURL} -O
     chmod 700 dtc
 
     if [ -f /home/tc/custom-module/${dtbfile}.dts ] && [ ! -f /home/tc/custom-module/${dtbfile}.dtb ]; then
@@ -1007,7 +1021,8 @@ function patchdtc() {
 
     if [ ! -f ${dtbfile}.dts ]; then
         echo "dts file for ${dtbfile} not found, trying to download"
-        curl --location --progress-bar -O "${dtsfiles}/${dtbfile}.dts"
+        remix_url ${dtsfiles}/${dtbfile}.dts
+        curl --location --progress-bar -O ${TMPURL}
     fi
 
     echo "Found $(echo $localdisks | wc -w) disks and $(echo $localnvme | wc -w) nvme"
@@ -1586,7 +1601,8 @@ function gettoolchain() {
         echo "File already cached"
     else
         echo "Downloading and caching toolchain"
-        curl --progress-bar --location "${TOOLKIT_URL}" --output dsm-toolchain.7.0.txz
+        remix_url ${TOOLKIT_URL}
+        curl --progress-bar --location ${TMPURL} --output dsm-toolchain.7.0.txz
     fi
 
     echo -n "Checking file -> "
@@ -1908,7 +1924,8 @@ function getstaticmodule() {
     echo "Removing any old redpill.ko modules"
     [ -f /home/tc/redpill.ko ] && rm -f /home/tc/redpill.ko
 
-    extension=$(curl -s --location "$redpillextension")
+    remix_url $redpillextension
+    extension=$(curl -s --location ${TMPURL})
 
     if [ "${TARGET_PLATFORM}" = "apollolake" ]; then
         SYNOMODEL="ds918p_$TARGET_REVISION"
@@ -1930,11 +1947,13 @@ function getstaticmodule() {
 
     #release=`echo $extension |  jq -r '.releases .${SYNOMODEL}_{$TARGET_REVISION}'`
     release=$(echo $extension | jq -r -e --arg SYNOMODEL $SYNOMODEL '.releases[$SYNOMODEL]')
-    files=$(curl -s --location "$release" | jq -r '.files[] .url')
+    remix_url $release
+    files=$(curl --location ${TMPURL} | jq -r '.files[] .url')
 
     for file in $files; do
         echo "Getting file $file"
-        curl -s -O $file
+        remix_url $file
+        curl -O ${TMPURL}
         if [ -f redpill*.tgz ]; then
             echo "Extracting module"
             tar xf redpill*.tgz
@@ -2166,11 +2185,13 @@ EOF
 function getlatestrploader() {
 
     echo -n "Checking if a newer version exists on the $build repo -> "
-
-    curl -s --location "$rploaderfile" --output latestrploader.sh
-    curl -s --location "$modalias3" --output modules.alias.3.json.gz
+    remix_url $rploaderfile
+    curl --location ${TMPURL} --output latestrploader.sh
+    remix_url $modalias3
+    curl --location ${TMPURL} --output modules.alias.3.json.gz
     [ -f modules.alias.3.json.gz ] && gunzip -f modules.alias.3.json.gz
-    curl -s --location "$modalias4" --output modules.alias.4.json.gz
+    remix_url $modalias4
+    curl --location ${TMPURL} --output modules.alias.4.json.gz
     [ -f modules.alias.4.json.gz ] && gunzip -f modules.alias.4.json.gz
 
     CURRENTSHA="$(sha256sum rploader.sh | awk '{print $1}')"
@@ -2206,7 +2227,7 @@ function getvars() {
     CONFIG=$(readConfig)
     selectPlatform $1
 
-    GETTIME=$(curl -v --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+    GETTIME=$(curl -v --silent http://baidu.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
     INTERNETDATE=$(date +"%d%m%Y" -d "$GETTIME")
     LOCALDATE=$(date +"%d%m%Y")
 
@@ -2229,17 +2250,6 @@ function getvars() {
     REDPILL_LKM_MAKE_TARGET="$(echo $platform_selected | jq -r -e '.redpill_lkm_make_target')"
     tcrppart="$(mount | grep -i optional | grep cde | awk -F / '{print $3}' | uniq | cut -c 1-3)3"
     local_cache="/mnt/${tcrppart}/auxfiles"
-
-    if [ ! -n "$(which bspatch)" ]; then
-
-        echo "bspatch does not exist, bringing over from repo"
-
-        curl --location "https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/bspatch" -O
-
-        chmod 777 bspatch
-        sudo mv bspatch /usr/local/bin/
-
-    fi
 
     [ ! -d ${local_cache} ] && sudo mkdir -p ${local_cache}
     [ -h /home/tc/custom-module ] && unlink /home/tc/custom-module
@@ -2440,7 +2450,8 @@ function listmodules() {
 function listextension() {
 
     if [ ! -f rpext-index.json ]; then
-        curl --progress-bar --location "${modextention}" --output rpext-index.json
+        remix_url ${modextention}
+        curl --progress-bar --location ${TMPURL} --output rpext-index.json
     fi
 
     ## Get extension author rpext-index.json and then parse for extension download with :
@@ -2448,7 +2459,7 @@ function listextension() {
 
     if [ ! -z $1 ]; then
         echo "Searching for matching extension for $1"
-        matchingextension=($(jq ". | select(.id | endswith(\"${1}\")) .url  " rpext-index.json))
+        matchingextension=($(jq ". | select(.id | contains(\"${1}\")) .url  " rpext-index.json))
 
         if [ ! -z $matchingextension ]; then
             echo "Found matching extension : "
@@ -2495,6 +2506,9 @@ build)
     checkinternet
     getlatestrploader
     gitdownload
+    sudo chown -R tc redpill*
+    cp /home/tc/ext-manager.sh /home/tc/redpill-load/ext-manager.sh
+    cp /home/tc/file.sh /home/tc/redpill-load/include/file.sh
 
     case $3 in
 
@@ -2594,7 +2608,8 @@ interactive)
     if [ -f interactive.sh ]; then
         . ./interactive.sh
     else
-        curl --location --progress-bar "https://github.com/pocopico/tinycore-redpill/raw/$build/interactive.sh" --output interactive.sh
+        remix_url "https://github.com/pocopico/tinycore-redpill/raw/$build/interactive.sh"
+        curl --location --progress-bar ${TMPURL} --output interactive.sh
         . ./interactive.sh
         exit 99
     fi
