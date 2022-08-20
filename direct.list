@@ -4,7 +4,6 @@ DOMAIN-SUFFIX,speed.cloudflare.com
 DOMAIN-SUFFIX,speed.dler.io
 DOMAIN-KEYWORD,speedtest
 # NAME: Speedtest
-DOMAIN-KEYWORD,parallels
 DOMAIN-SUFFIX,parallels.cn
 # NAME: RARBG
 DOMAIN-KEYWORD,rarbg
