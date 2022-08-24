@@ -1,6 +1,6 @@
  #!/bin/bash
 
-myproxy="http://nas.pkcpersonal.cn:5720"
+myproxy="http://:5720"
 
 echo -e "curl and git's proxy will set to \033[1m$myproxy\033[0m"
 
