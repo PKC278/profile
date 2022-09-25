@@ -9,4 +9,5 @@ DOMAIN-SUFFIX,b-ok.global
 # NAME: sm.ms
 DOMAIN-SUFFIX,sm.ms
 # NAME: CreamData
-creamdata.net
+DOMAIN-SUFFIX,creamdata.net
+DOMAIN-KEYWORD,creamdata
