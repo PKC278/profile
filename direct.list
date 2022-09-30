@@ -7,3 +7,5 @@ DOMAIN-KEYWORD,speedtest
 DOMAIN-SUFFIX,parallels.cn
 # NAME: VPS
 DOMAIN-SUFFIX,pkcsublog.top
+# NAME: NAS
+DOMAIN-SUFFIX,pkcpersonal.cn
