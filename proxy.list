@@ -7,7 +7,8 @@ DOMAIN-SUFFIX,singlelogin.app
 DOMAIN-SUFFIX,1lib.domains
 DOMAIN-SUFFIX,b-ok.global
 # NAME: CreamData
-DOMAIN-KEYWORD,creamdata
-DOMAIN-SUFFIX,dfktpaum.com
+#DOMAIN-KEYWORD,creamdata
+#DOMAIN-SUFFIX,dfktpaum.com
 # NAME: 9uu
-DOMAIN-SUFFIX,9uu.com
+DOMAIN-KEYWORD,9uu.com
+DOMAIN-SUFFIX,khz67.com
