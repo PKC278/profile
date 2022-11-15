@@ -11,3 +11,5 @@ DOMAIN-SUFFIX,pkcpersonal.cn
 DOMAIN-SUFFIX,torrentapi.org
 # BYG
 DOMAIN-KEYWORD,bygcloud
+# ghproxy
+ghproxy.pkcsublog.top
