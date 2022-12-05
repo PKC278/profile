@@ -14,6 +14,3 @@ DOMAIN-KEYWORD,bygcloud
 # ghproxy
 DOMAIN,ghproxy.pkcsublog.top
 DOMAIN,pkcsublog.top
-# ipv6-test
-DOMAIN-SUFFIX,test-ipv6.com
-DOMAIN-SUFFIX,testipv6.cn
