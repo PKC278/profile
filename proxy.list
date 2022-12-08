@@ -8,3 +8,6 @@ DOMAIN-SUFFIX,1lib.domains
 DOMAIN-SUFFIX,b-ok.global
 # NAME: VPS
 DOMAIN-SUFFIX,pkcsublog.top
+# NAME: OpenAi
+DOMAIN-SUFFIX,openai.com
+DOMAIN,openaiapi-site.azureedge.net
