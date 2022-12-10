@@ -11,4 +11,4 @@ DOMAIN-SUFFIX,pkcsublog.top
 # NAME: openwrt
 DOMAIN,op.supes.top
 # NAME: OpenAi
-# DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openai.com
