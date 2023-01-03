@@ -1,5 +1,3 @@
-# CN
-DOMAIN-KEYWORD,cn
 # NAME: Speedtest
 DOMAIN-SUFFIX,ooklaserver.net
 DOMAIN-SUFFIX,speed.cloudflare.com
@@ -18,3 +16,5 @@ DOMAIN,ghproxy.pkcsublog.top
 DOMAIN,pkcsublog.top
 # ChatGpt
 DOMAIN,chat.openai.com
+# Jetbrains_cn
+jetbrains.com.cn
