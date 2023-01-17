@@ -10,3 +10,5 @@ DOMAIN-SUFFIX,b-ok.global
 DOMAIN-SUFFIX,pkcsublog.top
 # NAME: openwrt
 DOMAIN,op.supes.top
+# NAME: SteamOS
+DOMAIN-SUFFIX,steamos.cloud
