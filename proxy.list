@@ -4,7 +4,7 @@ DOMAIN-SUFFIX,keeflys.com
 DOMAIN-SUFFIX,pkcsublog.top
 # NAME: openwrt
 DOMAIN,op.supes.top
-# NAME: SteamOS
+# NAME: SteamDeck
 DOMAIN-SUFFIX,steamos.cloud
-# NAME: flathub
-DOMAIN-SUFFIX,dl.flathub.org
+DOMAIN-SUFFIX,flathub.org
+DOMAIN-SUFFIX,deckbrew.xyz
