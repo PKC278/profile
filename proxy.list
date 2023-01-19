@@ -12,3 +12,5 @@ DOMAIN-SUFFIX,pkcsublog.top
 DOMAIN,op.supes.top
 # NAME: SteamOS
 DOMAIN-SUFFIX,steamos.cloud
+# NAME: flathub
+DOMAIN-SUFFIX,dl.flathub.org
