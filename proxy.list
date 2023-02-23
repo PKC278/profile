@@ -11,3 +11,5 @@ DOMAIN-SUFFIX,deckbrew.xyz
 DOMAIN-SUFFIX,launcher.moe
 # NAME: OpenAi
 DOMAIN-SUFFIX,openai.com
+# NAME: google
+DOMAIN-SUFFIX,gvt1.com
