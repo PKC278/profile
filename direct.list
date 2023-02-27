@@ -12,3 +12,5 @@ DOMAIN-SUFFIX,torrentapi.org
 # ghproxy
 DOMAIN,ghproxy.pkcsublog.top
 DOMAIN,pkcsublog.top
+# Google
+DOMAIN-SUFFIX,gvt1.com
