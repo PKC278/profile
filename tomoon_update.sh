@@ -11,15 +11,14 @@ fi
 
 echo "Downloading Tomoon..."
 
-# GitHub repository owner and name
-owner=YukiCoco
-repo=ToMoon
+# 发送GET请求到GitHub API，获取最新发布版本的JSON响应
+response=$(curl -s https://api.github.com/repos/YukiCoco/ToMoon/releases/latest)
 
-# Get the latest release tag
-tag=$(curl -s "https://api.github.com/repos/$owner/$repo/releases/latest" | grep -oP '"tag_name": "\K(.*)(?=")')
+# 从JSON响应中提取版本号字段的值
+latest_version=$(echo "$response" | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)
 
 # Construct the zip file URL
-zip_url="https://github.com/$owner/$repo/releases/download/$tag/tomoon-$tag.zip"
+zip_url="https://github.com/YukiCoco/ToMoon/releases/download/$latest_version/tomoon-$latest_version.zip"
 
 # Download the zip file
 curl -L -o /tmp/tomoon.zip "$zip_url"
