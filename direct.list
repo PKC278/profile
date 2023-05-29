@@ -9,9 +9,8 @@ DOMAIN-SUFFIX,parallels.cn
 DOMAIN-SUFFIX,pkcpersonal.cn
 # torrentapi
 DOMAIN-SUFFIX,torrentapi.org
-# ghproxy
-DOMAIN,ghproxy.pkcsublog.top
-DOMAIN,pkcsublog.top
+# 
+DOMAIN-SUFFIX,pkcsublog.top
 # Google
 DOMAIN-SUFFIX,gvt1.com
 # api.bygcloud.cyou
