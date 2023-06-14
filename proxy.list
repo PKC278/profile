@@ -10,4 +10,4 @@ DOMAIN-SUFFIX,launcher.moe
 # NAME: OpenAi
 DOMAIN-SUFFIX,openai.com
 # NAME: AList
-DOMAIN-SUFFIX,api.nn.ci
+DOMAIN,api.nn.ci
