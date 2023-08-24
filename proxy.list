@@ -1,7 +1,7 @@
 # NAME: Emotn
 DOMAIN-SUFFIX,keeflys.com
 # NAME: openwrt
-DOMAIN,op.supes.top
+DOMAIN-SUFFIX,openwrt.ai
 # NAME: SteamDeck
 DOMAIN-SUFFIX,steamos.cloud
 DOMAIN-SUFFIX,flathub.org
