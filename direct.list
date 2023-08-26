@@ -13,3 +13,5 @@ DOMAIN-SUFFIX,torrentapi.org
 DOMAIN-SUFFIX,pkcsublog.top
 # Google
 DOMAIN-SUFFIX,gvt1.com
+# CloudFlare API
+DOMAIN,api.cloudflare.com
