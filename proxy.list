@@ -8,7 +8,5 @@ DOMAIN-SUFFIX,steamos.cloud
 DOMAIN-SUFFIX,flathub.org
 DOMAIN-SUFFIX,deckbrew.xyz
 DOMAIN-SUFFIX,launcher.moe
-# NAME: OpenAi
-DOMAIN-SUFFIX,openai.com
 # NAME: AList
 DOMAIN,api.nn.ci
