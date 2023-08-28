@@ -10,3 +10,5 @@ DOMAIN-SUFFIX,deckbrew.xyz
 DOMAIN-SUFFIX,launcher.moe
 # NAME: AList
 DOMAIN,api.nn.ci
+# NAME: Github
+DOMAIN-SUFFIX,githubusercontent.com
