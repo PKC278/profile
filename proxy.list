@@ -11,3 +11,5 @@ DOMAIN-SUFFIX,launcher.moe
 DOMAIN,api.nn.ci
 # NAME: Github
 DOMAIN-SUFFIX,githubusercontent.com
+# NAME: Kuromis
+DOMAIN-SUFFIX,kuromis.com
