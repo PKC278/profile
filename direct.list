@@ -7,11 +7,12 @@ DOMAIN-KEYWORD,speedtest
 DOMAIN-SUFFIX,parallels.cn
 # NAME: NAS
 DOMAIN-SUFFIX,pkcpersonal.cn
-# torrentapi
+# NAME: torrentapi
 DOMAIN-SUFFIX,torrentapi.org
-# 
 DOMAIN-SUFFIX,pkcsublog.top
 # Google
 DOMAIN-SUFFIX,gvt1.com
 # CloudFlare API
 DOMAIN,api.cloudflare.com
+# NAME: Local
+DOMAIN,op
