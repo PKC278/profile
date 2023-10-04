@@ -16,3 +16,5 @@ DOMAIN-SUFFIX,gvt1.com
 DOMAIN,api.cloudflare.com
 # NAME: Local
 DOMAIN,op
+# NAME: Gmail
+DOMAIN-SUFFIX,gmail.com
