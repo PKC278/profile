@@ -14,5 +14,5 @@ DOMAIN-SUFFIX,pkcsublog.top
 DOMAIN-SUFFIX,gvt1.com
 # CloudFlare API
 DOMAIN,api.cloudflare.com
-# NAME: Local
-DOMAIN,op
+# NAME: Tampermonkey dashboard
+DOMAIN,ui.tampermonkey.net
