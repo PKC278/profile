@@ -6,9 +6,6 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bing.png
 #!date = 2023-10-05 17:19:01
 
-#[Rewrite]
-#^https:\/\/www\.bing\.com\/(search|new) header-add X-Forwarded-For 1.1.1.1
-
 [Script]
 http-request ^https:\/\/www\.bing\.com\/(search|new) script-path = https://raw.githubusercontent.com/PKC278/clash/main/BingAI.js, requires-body = false, tag = Bing AI
 
