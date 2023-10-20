@@ -16,3 +16,5 @@ DOMAIN-SUFFIX,gvt1.com
 DOMAIN,api.cloudflare.com
 # NAME: Tampermonkey dashboard
 DOMAIN,ui.tampermonkey.net
+# NAME: API2D
+DOMAIN-SUFFIX,api2d.net
