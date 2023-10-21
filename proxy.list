@@ -16,4 +16,4 @@ DOMAIN-SUFFIX,brew.sh
 # NAME: Azure
 DOMAIN-SUFFIX,msecnd.net
 # NAME: HD Dolby
-DOMAIN-SUFFIX,hddolby.com
+DOMAIN,www.hddolby.com
