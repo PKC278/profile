@@ -19,6 +19,7 @@ DOMAIN,ui.tampermonkey.net
 # NAME: API2D
 DOMAIN-SUFFIX,api2d.net
 # NAME: PT
-DOMAIN,t.hddolby.com
+DOMAIN-SUFFIX,hddolby.com
 DOMAIN-SUFFIX,hdfans.org
 DOMAIN-SUFFIX,rousi.zip
+DOMAIN-SUFFIX,pttime.org
