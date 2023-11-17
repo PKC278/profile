@@ -11,4 +11,4 @@ http-request ^https:\/\/(www\.bing\.com\/(search|new)|copilot\.microsoft\.com) s
 
 
 [Mitm]
-hostname = www.bing.com
+hostname = www.bing.com,copilot.microsoft.com
