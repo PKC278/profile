@@ -7,7 +7,8 @@
 #!date = 2023-10-05 17:19:01
 
 [Script]
-http-request ^https:\/\/www\.bing\.com\/(search|new) script-path = https://raw.githubusercontent.com/PKC278/clash/main/BingAI.js, requires-body = false, tag = Bing AI
+http-request ^https:\/\/(www\.bing\.com\/(search|new)|copilot\.microsoft\.com) script-path = https://raw.githubusercontent.com/PKC278/clash/main/BingAI.js, requires-body = false, tag = Bing AI
+
 
 [Mitm]
 hostname = www.bing.com
