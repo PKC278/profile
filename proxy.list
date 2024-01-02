@@ -17,3 +17,5 @@ DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,intellij.net
 # NAME: sub-web
 DOMAIN,sub-web.pkcsublog.top
+# NAME: openwrt
+DOMAIN,dl.openwrt.ai
