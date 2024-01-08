@@ -19,3 +19,5 @@ DOMAIN-SUFFIX,intellij.net
 DOMAIN,sub-web.pkcsublog.top
 # NAME: openwrt
 DOMAIN,dl.openwrt.ai
+# NAME: Emby Plugin
+DOMAIN-SUFFIX,mb3admin.com
