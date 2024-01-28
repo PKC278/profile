@@ -21,3 +21,5 @@ DOMAIN,sub-web.pkcsublog.top
 DOMAIN-SUFFIX,openwrt.ai
 # NAME: Emby Plugin
 DOMAIN-SUFFIX,mb3admin.com
+# NAME: mikanani
+DOMAIN-SUFFIX,mikanani.me
