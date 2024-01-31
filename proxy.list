@@ -23,3 +23,5 @@ DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,mb3admin.com
 # NAME: mikanani
 DOMAIN-SUFFIX,mikanani.me
+# NAME: hcaptcha
+DOMAIN-SUFFIX,hcaptcha.com
