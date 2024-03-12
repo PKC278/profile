@@ -4,13 +4,13 @@
 #!author = PKC
 #!homepage = 
 #!icon = 
-#!date = 2024-03-12 20:30:21:54
+#!date = 2024-03-12 20:51:21:54
 
 [Rule]
 
 [Rewrite]
 # 开屏广告
-^http:\/\/m5-server\.zhuli\.whxinna.com\/ad_manage\/get_ad_placement reject-dict
+^http:\/\/m5-server\.zhuli\.whxinna.com\/ad_manage\/get_ad_placement reject
 
 [Script]
 
