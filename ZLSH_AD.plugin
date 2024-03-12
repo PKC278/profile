@@ -4,11 +4,9 @@
 #!author = PKC
 #!homepage = 
 #!icon = 
-#!date = 2024-03-12 20:29:21:54
+#!date = 2024-03-12 20:30:21:54
 
 [Rule]
-# 开屏广告
-URL-REGEX, ^http:\/\/m5-server\.zhuli\.whxinna.com\/ad_manage\/get_ad_placement, REJECT-DICT
 
 [Rewrite]
 # 开屏广告
