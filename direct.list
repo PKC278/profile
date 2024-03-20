@@ -32,3 +32,5 @@ DOMAIN-SUFFIX,m-team.io
 DOMAIN-SUFFIX,m-team.cc
 # NAME: ImmersiveTranslate
 DOMAIN-SUFFIX,immersivetranslate.com
+# NAME: keepalive.synology.com
+IP-CIDR,220.130.197.210/32,no-resolve
