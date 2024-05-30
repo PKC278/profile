@@ -1,0 +1,80 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Cache Clash_Core
+        id: cache-Clash_Core
+        uses: actions/cache@v4
+        with:
+          path: clash
+          key: Clash_Core
+          restore-keys: |
+            Clash_Core
+
+      - name: Download Clash_Core
+        if: steps.cache-Clash_Core.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o clash-linux-amd64.tar.gz https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz
+          tar -zxvf clash-linux-amd64.tar.gz
+
+      - name: Cache GEOIP
+        id: cache-GEOIP
+        uses: actions/cache@v4
+        with:
+          path: geoip.metadb
+          key: GEOIP
+          restore-keys: |
+            GEOIP
+
+      - name: Download GEOIP
+        if: steps.cache-GEOIP.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o geoip.metadb https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+
+      - name: Download config.yaml
+        run: |
+          curl -L -o config.yaml "https://url.v1.mk/sub?target=clash&url=~&config=https%3A%2F%2Fraw.githubusercontent.com%2FPKC278%2Fclash%2Fmain%2Fconfig.ini"
+
+      - name: Test
+        run: |
+          ./clash -d ./ &
+          CLASH_PID=$!
+          sleep 2
+          if ps -p $CLASH_PID > /dev/null; then
+              kill $CLASH_PID
+              exit 0
+          else
+              exit 1
+          fi
+  Release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Replace strings in config.ini
+        run: |
+          sed -i 's/PKC278\/clash\/main/PKC278\/clash\/release/g' config.ini
+      - name: Push to release branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git stash
+          git switch -C release
+          git stash pop
+          git add config.ini
+          git commit -m "Update config.ini for release"
+          git push -f origin release

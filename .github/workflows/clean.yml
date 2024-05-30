@@ -1,0 +1,20 @@
+name: Clean
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Clean
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git fetch --unshallow
+          git reset --soft fe63edfb8957e5ef40ce43cbf0cda6375d61507a
+          git add .
+          git commit -m "Clean"
+          git push -f
