@@ -43,9 +43,26 @@ jobs:
         run: |
           curl -L -o geoip.metadb https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
 
+      - name: Cache subconverter
+        id: cache-subconverter
+        uses: actions/cache@v4
+        with:
+          path: subconverter
+          key: subconverter
+          restore-keys: |
+            subconverter
+
+      - name: Download subconverter
+        if: steps.cache-subconverter.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
+          tar -zxvf subconverter.tar.gz
+
       - name: Download config.yaml
         run: |
-          curl -L -o config.yaml "https://url.v1.mk/sub?target=clash&url=~&config=https%3A%2F%2Fraw.githubusercontent.com%2FPKC278%2Fclash%2Fmain%2Fconfig.ini"
+          subconverter/subconverter &
+          sleep 2
+          curl -L -o config.yaml "http://localhost:25500/sub?target=clash&url=ss%3A%2F%2FYWVzLTI1Ni1jZmI6eXlvdXNlcnBhc3N3b3JkQDEyNy4wLjAuMTo4Mzg4&config=https%3A%2F%2Fraw.githubusercontent.com%2FPKC278%2Fclash%2Fmain%2Fconfig.ini"
 
       - name: Test
         run: |
@@ -53,7 +70,6 @@ jobs:
           CLASH_PID=$!
           sleep 2
           if ps -p $CLASH_PID > /dev/null; then
-              kill $CLASH_PID
               exit 0
           else
               exit 1
