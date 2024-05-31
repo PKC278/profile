@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  test:
+  Test:
     runs-on: ubuntu-latest
 
     steps:
@@ -47,7 +47,7 @@ jobs:
         id: cache-subconverter
         uses: actions/cache@v4
         with:
-          path: subconverter
+          path: subconverter.tar.gz
           key: subconverter
           restore-keys: |
             subconverter
@@ -56,11 +56,11 @@ jobs:
         if: steps.cache-subconverter.outputs.cache-hit != 'true'
         run: |
           curl -L -o subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
-          tar -zxvf subconverter.tar.gz
 
       - name: Download config.yaml
         run: |
-          subconverter/subconverter &
+          tar -zxf subconverter.tar.gz
+          subconverter/subconverter > /dev/null 2>&1 &
           sleep 2
           curl -L -o config.yaml "http://localhost:25500/sub?target=clash&url=ss%3A%2F%2FYWVzLTI1Ni1jZmI6eXlvdXNlcnBhc3N3b3JkQDEyNy4wLjAuMTo4Mzg4&config=https%3A%2F%2Fraw.githubusercontent.com%2FPKC278%2Fclash%2Fmain%2Fconfig.ini"
 
@@ -75,7 +75,7 @@ jobs:
               exit 1
           fi
   Release:
-    needs: test
+    needs: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
