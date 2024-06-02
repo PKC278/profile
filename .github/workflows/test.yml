@@ -91,9 +91,29 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Replace strings in config.ini
+
+      - name: Prepare files
         run: |
-          sed -i 's/PKC278\/clash\/main/PKC278\/clash\/release/g' config.ini
+          python -c "
+          import os
+          import shutil
+          import subprocess
+          import fileinput
+          import sys
+          git_hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode('utf-8').strip()
+          for line in fileinput.input('config.ini', inplace=True):
+            sys.stdout.write(line.replace('PKC278/clash/main', 'PKC278/clash/release'))
+          for filename in os.listdir('.'):
+            if filename.endswith('.list'):
+              new_filename = f'{os.path.splitext(filename)[0]}-{git_hash}.list'
+              shutil.copy(filename, new_filename)
+          for line in fileinput.input('config.ini', inplace=True):
+            if 'PKC278/clash' in line:
+              sys.stdout.write(line.replace('.list', f'-{git_hash}.list'))
+            else:
+              sys.stdout.write(line)
+          "
+
       - name: Push to release branch
         run: |
           git config user.name "github-actions"
@@ -101,6 +121,6 @@ jobs:
           git stash
           git switch -C release
           git stash pop
-          git add config.ini
-          git commit -m "Update config.ini for release"
+          git add .
+          git commit -m "Update for release"
           git push -f origin release
