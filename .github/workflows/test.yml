@@ -57,19 +57,11 @@ jobs:
         run: |
           curl -L -o subconverter.tar.gz https://github.com/tindy2013/subconverter/releases/download/v0.9.0/subconverter_linux64.tar.gz
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Start web server
-        run: |
-          sed -i 's|https://raw.githubusercontent.com/PKC278/clash/main|http://localhost:8000|g' "config.ini"
-          python -m http.server 8000 &
-
       - name: Download config.yaml
         run: |
+          sed -i 's|https://raw.githubusercontent.com/PKC278/clash/main|http://localhost:8000|g' "config.ini"
           tar -zxf subconverter.tar.gz
+          python -m http.server 8000 &
           subconverter/subconverter > /dev/null 2>&1 &
           sleep 2
           curl -L -o config.yaml "http://localhost:25500/sub?target=clash&url=ss%3A%2F%2FYWVzLTI1Ni1jZmI6eXlvdXNlcnBhc3N3b3JkQDEyNy4wLjAuMTo4Mzg4&config=http%3A%2F%2Flocalhost%3A8000%2Fconfig.ini"
