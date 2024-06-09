@@ -1,8 +1,5 @@
 DOMAIN-SUFFIX,pkcpersonal.cn
 DOMAIN-SUFFIX,pkcsublog.top
-# API
-DOMAIN,api.cloudflare.com
-DOMAIN,api.day.app
 # NAME: Tampermonkey dashboard
 DOMAIN,ui.tampermonkey.net
 # NAME: PT
@@ -18,3 +15,4 @@ DOMAIN-SUFFIX,hdtime.org
 DOMAIN-KEYWORD,m-team
 # NAME: PlayStation Download
 DOMAIN-SUFFIX,dl.playstation.net
+PROCESS-NAME,ddns-go
