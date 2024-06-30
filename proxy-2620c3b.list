@@ -1,0 +1,20 @@
+# NAME: Emotn
+DOMAIN-SUFFIX,keeflys.com
+# NAME: Homebrew
+DOMAIN-SUFFIX,brew.sh
+# NAME: intellij AI
+DOMAIN-SUFFIX,intellij.net
+# NAME: sub-web
+DOMAIN,sub-web.pkcsublog.top
+# NAME: openwrt
+DOMAIN-SUFFIX,openwrt.ai
+# NAME: Emby Plugin
+DOMAIN-SUFFIX,mb3admin.com
+# NAME: mikanani
+DOMAIN-SUFFIX,mikanani.me
+# NAME: hcaptcha
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,bygcloud.com
+DOMAIN-SUFFIX,kuromis.com
+DOMAIN-SUFFIX,cn2gias.uk
+PROCESS-NAME,mosdns
