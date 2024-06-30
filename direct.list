@@ -16,3 +16,12 @@ DOMAIN-KEYWORD,m-team
 # NAME: PlayStation Download
 DOMAIN-SUFFIX,dl.playstation.net
 PROCESS-NAME,ddns-go
+# NAME: IPTV
+DOMAIN-SUFFIX,dnsany.com,DIRECT
+DOMAIN-SUFFIX,cmvideo.cn,DIRECT
+DOMAIN-SUFFIX,chinamobile.com,DIRECT
+DOMAIN-SUFFIX,mobaibox.com,DIRECT
+DOMAIN-SUFFIX,gitv.tv,DIRECT
+DOMAIN-SUFFIX,cctv.cn,DIRECT
+DOMAIN-SUFFIX,yangshipin.cn,DIRECT
+IP-CIDR,183.206.0.0/15,DIRECT,no-resolve
